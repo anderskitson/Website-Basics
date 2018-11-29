@@ -20,7 +20,7 @@ The first step to creating a website, is to setup up version control, I like to 
 * **9** Now here comes the first git command, open up Terminal type `git init` and always hit enter after i say type this in Terminal. Yay:raised_hands: you have now created your first git repository locally. 
 
 *  **11** 
-Next hover over your `project name` folder in the top left and click the +new file icon not new folder and name it README.md (as seen below) This is where all your documentation will go. The file should have opened :sparkles:automagically:sparkles:, now Write `# Project-Name` in the editor itself. Type | <kbd>Ctrl<kbd> + s | or File save.
+Next hover over your `project name` folder in the top left and click the +new file icon not new folder and name it README.md (as seen below) This is where all your documentation will go. The file should have opened :sparkles:automagically:sparkles:, now Write `# Project-Name` in the editor itself. Type <kbd>Ctrl +</kbd> s or File save.
 
 ![vscode-file](images/vscode-newfile.gif)
 
