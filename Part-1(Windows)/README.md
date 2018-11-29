@@ -25,4 +25,5 @@ Next hover over your `project name` folder in the top left and click the +new fi
 ![vscode-file](images/vscode-newfile.gif)
 
 * **12** If you feel like this :dizzy_face: so far, welcome to website buidling, if not congrats :yum:
+* **13** In Terminal type `git add README.md` This will stage your readme file to git and prepare it to be pushed up to github. Next type `git commit -m "first commit"` This will add a message associated with that file, that you can read in github, so it's basically notes about your coding progress as you go. Next open up that github repository we started in your browser in the instructions there is a command `git remore add origin ...` copy and paster that into terminal and hit enter. This connects your local ***git*** repo to your github one. Lastly type `git push -u origin master` this will push your code to github. Open the github repository again in the browser, and hit refresh. You should now see your README.md file with the name of your project. Wahooooo :metal:
 
