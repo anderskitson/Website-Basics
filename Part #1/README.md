@@ -11,5 +11,7 @@ The first step to creating a website, is to setup up version control, I like to 
 
 * **4** Fill out the repository name whatever you like, try using something descriptive like *website learning 1*. Give it a descriptive description next, choose public, then click create repository.
 * **5** Now here comes the fun part open up you ide or code editor, either one of them can have a terminal, or command prompt built in (which is where you use ***git*** ), if it doesnt you can use terminal on mac and linux or powershell (for now) on windows. I am going to assume you are using the built in one in Visual Studio Code which you can download here https://code.visualstudio.com/ which runs on mac, windows and linux
-* **6** Once you editor is running open the terminal, to do that is vscode you can use <kbd>Ctrl</kbd> + ~
+* **6** Once you editor is running open the terminal, to do that in vscode you can use <kbd>Ctrl</kbd> + ~ or click on Terminal in top nav and choose New Terminal. Next type in your terminal that just opened 
+
+```cd ~```
 
