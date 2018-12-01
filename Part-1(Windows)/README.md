@@ -40,7 +40,7 @@ Great Job, next up we are going to start using Node.js and Gatsby to build a web
         <meta charset="utf-8">
         <title>project-name</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <p>Hello world! This is HTML5 Boilerplate.</p>
@@ -50,7 +50,19 @@ Great Job, next up we are going to start using Node.js and Gatsby to build a web
 - run `git add .` return then `git commit -m "added index"` then `git push`
 - download `nvm-setup.zip` from https://github.com/coreybutler/nvm-windows/releases extract and run the installer
 - Once installed looke at the Usage https://github.com/coreybutler/nvm-windows#usage now open a new taba and go to https://nodejs.org/en/ Note the current number, currently mine says 11.3.0
-- Now go to your terminal and type `nvm install 11.3.0` Great you have now installed node
+- Now go to your terminal and type `nvm install 11.3.0` Great you have now installed node, just to make sure you are using node run `nvm use 11.3.0`
+- Now go to https://surge.sh/ we are going to use this to publish our webiste for free. Yay. Now open terminal and run `npm install --global surge`
+- Now run the magic command `surge` enter
+- Give your project a name and hit enter
+- Now visit your surge website
+- Next we are going to setup sass/css `npm install gulp-cli -g`
+- Create a package.json file `npm init`
+- Hit enter until finished
+- install the gulp package in you devDependencies `npm install --save-dev gulp@next`
+- Create a `gulpfile.js`
+- 
+
+
 
 Now go to [Part Two Node.js & Gatsby](../Part-2(Windows)/README.md)
 

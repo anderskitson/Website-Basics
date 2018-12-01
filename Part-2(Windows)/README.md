@@ -17,4 +17,11 @@
 - run gatsby develop
 - visit the url
 - yay
+- Open src folder
+- look at index.js and page-2.js
+- look at layout .js `children` section
+- install prettier, try turning single quotes true/false
+- Go to `components/header.js` change header background color
+- Go to `gatsby-config.js` change title to `project-name`
+- Look at how the title is accessed in the code `<Header siteTitle={data.site.siteMetadata.title} />` in `layout.js` This is using something called `react` and `graphql` React was created by facebook and is a js library for building user interfaces, GraphQl is a querying language it is how you handle data, also create by facebook.
 - 
