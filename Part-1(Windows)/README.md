@@ -29,5 +29,30 @@ Next hover over your `project name` folder in the top left and click the +new fi
 
 ![vscode-file](images/github-pushed.png)
 
-Great Job, next up we are going to start using Node.js and Gatsby to build a website that you can store on this github repository, also the great thing about github is you can share your code with friends and make something together. I'll explain git more in a branching and common commands deep dive, but we done need to do that just yet, you can learn as you go. Now go to [Part Two Windows](../Part-2(Windows)/README.md)
+Great Job, next up we are going to start using Node.js and Gatsby to build a website that you can store on this github repository, also the great thing about github is you can share your code with friends and make something together. I'll explain git more in a branching and common commands deep dive, but we done need to do that just yet, you can learn as you go. 
+
+- create `index.html`
+
+```
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>project-name</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <p>Hello world! This is HTML5 Boilerplate.</p>
+    </body>
+</html>
+```
+- run `git add .` return then `git commit -m "added index"` then `git push`
+- download `nvm-setup.zip` from https://github.com/coreybutler/nvm-windows/releases extract and run the installer
+- Once installed looke at the Usage https://github.com/coreybutler/nvm-windows#usage now open a new taba and go to https://nodejs.org/en/ Note the current number, currently mine says 11.3.0
+- Now go to your terminal and type `nvm install 11.3.0` Great you have now installed node
+
+Now go to [Part Two Node.js & Gatsby](../Part-2(Windows)/README.md)
+
+
 
