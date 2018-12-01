@@ -59,4 +59,20 @@ const About = () => (
 export default About
 ```
 - Now go and visit http://localhost:8000/about you should see your About Us page, yahoo
+- Now Wrap the div in a `<Layout></Layout` Component and also import the Layout Component. Like Below
+```
+import React from 'react'
+import Layout from '../components/layout'
+
+const About = () => (
+    <Layout>
+        <div>
+            ...
+        </div>
+    </Layout>
+)
+
+export default About
+```
+- Now should be looking like the other pages? Why is that?
 - 
