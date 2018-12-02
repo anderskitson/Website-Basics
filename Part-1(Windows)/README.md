@@ -62,16 +62,54 @@ Next hover over your `project name` folder in the top left and click the +new fi
   
 * **19** Now go to your terminal and type `nvm install 11.3.0` Great you have now installed node, just to make sure you are using node run `nvm use 11.3.0` next type in terminal `node -v` to make sure you are running the node version you just installed.
   
-- Now go to https://surge.sh/ we are going to use this to publish our webiste for free. Yay. Now open terminal and run `npm install --global surge`
-- Now run the magic command `surge` enter
-- Give your project a name and hit enter
-- Now visit your surge website
-- Next we are going to setup sass/css `npm install gulp-cli -g`
-- Create a package.json file `npm init`
-- Hit enter until finished
-- install the gulp package in you devDependencies `npm install --save-dev gulp@next`
+* **20** Now go to https://surge.sh/ we are going to use this to publish our webiste for free. Boom :boom: Now open terminal and run `npm install --global surge`. This will give us a tool where we can host our project easily for free, and we can even use a custom domain.
+  
+* **21** Now run the magic command `surge` enter. Give your project a name and hit enter. Now visit your surge website.
+  
+* **22** Next we are going to setup sass/css `npm install gulp-cli -g` gulp is a tool for compiling and sass files into css so we can style our website.
+  
+* **23** Create a package.json file `npm init` this is where our project with track our node modules versions, plus some other info we don't need to worry about right now.
+  
+* **24** install the gulp and browser sync node modules package in you devDependencies `npm install --save-dev gulp@next` now run browsersync install `npm install -g browser-sync`
 - Create a `gulpfile.js`
-- 
+- In your `gulpfile.js` add the following code below
+
+```
+var gulp = require("gulp");
+var sass = require("gulp-sass");
+var browserSync = require("browser-sync").create();
+
+gulp.task("styles", function() {
+  gulp
+    .src("sass/**/*.scss")
+    .pipe(sass().on("error", sass.logError))
+    .pipe(gulp.dest("./css/"));
+});
+
+// Static server
+gulp.task("browser-sync", function() {
+  browserSync.init({
+    server: {
+      baseDir: "./"
+    }
+  });
+});
+
+//Watch task
+gulp.task("default", function() {
+  gulp.watch("sass/**/*.scss", gulp.series("styles"));
+});
+
+```
+
+* **25** Create a file in this directory `sass/style.scss` Next create a `css folder` in the root directory. Go into your `style.scss` file and add this code below.
+
+```
+body{
+    background:aqua;
+}
+```
+* **26** Now in Terminal run `gulp` and open a new terminal window and run `gulp browser-sync` your website should auto open. should now have a Aqua background, try changing the color, remember to save and refresh the browser.
 
 Great Job, next up we are going to start using Node.js and Gatsby to build a website that you can store on this github repository, also the great thing about github is you can share your code with friends and make something together. I'll explain git more in a branching and common commands deep dive, but we done need to do that just yet, you can learn as you go. 
 
