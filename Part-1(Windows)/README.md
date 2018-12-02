@@ -71,8 +71,8 @@ Next hover over your `project name` folder in the top left and click the +new fi
 * **23** Create a package.json file `npm init` this is where our project with track our node modules versions, plus some other info we don't need to worry about right now.
   
 * **24** install the gulp and browser sync node modules package in you devDependencies `npm install --save-dev gulp@next` now run browsersync install `npm install -g browser-sync`
-- Create a `gulpfile.js`
-- In your `gulpfile.js` add the following code below
+- Create a `Gulpfile.js`
+- In your `Gulpfile.js` add the following code below
 
 ```
 var gulp = require("gulp");
