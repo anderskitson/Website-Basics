@@ -1,4 +1,4 @@
-# Part 1, Code Versioning & Basic HTML/CSS/JS (Windows Instructions)
+# Part 1, Code Versioning & Neccesary HTML/CSS (Windows Instructions)
 ### **this is !important**
 
 The first step to creating a website, is to setup up version control, I like to use the technology git, but there are others, which we won't get into. To setup git on Windows the easiest way is to 
