@@ -77,28 +77,29 @@ Next hover over your `project name` folder in the top left and click the +new fi
 ```
 var gulp = require("gulp");
 var sass = require("gulp-sass");
-var browserSync = require("browser-sync").create();
+var browserSync = require("browser-sync");
 
-gulp.task("styles", function() {
-  gulp
+gulp.task("sass", function() {
+  return gulp
     .src("sass/**/*.scss")
     .pipe(sass().on("error", sass.logError))
-    .pipe(gulp.dest("./css/"));
+    .pipe(gulp.dest("./css/"))
+    .pipe(browserSync.reload({ stream: true }));
 });
 
-// Static server
-gulp.task("browser-sync", function() {
-  browserSync.init({
-    server: {
-      baseDir: "./"
-    }
-  });
-});
+// watch Sass files for changes, run the Sass preprocessor with the 'sass' task and reload
+gulp.task(
+  "serve",
+  gulp.series("sass", function() {
+    browserSync({
+      server: {
+        baseDir: "./"
+      }
+    });
 
-//Watch task
-gulp.task("default", function() {
-  gulp.watch("sass/**/*.scss", gulp.series("styles"));
-});
+    gulp.watch("sass/**/*.scss", gulp.series("sass"));
+  })
+);
 
 ```
 
@@ -109,11 +110,11 @@ body{
     background:aqua;
 }
 ```
-* **26** Now in Terminal run `gulp` and open a new terminal window and run `gulp browser-sync` your website should auto open. should now have a Aqua background, try changing the color, remember to save and refresh the browser.
+* **26** Now in Terminal run `gulp serve` Now we are running a local server, that compiles are sass into css and auto refreshes the page on reload.
 
 Great Job, next up we are going to start using Node.js and Gatsby to build a website that you can store on this github repository, also the great thing about github is you can share your code with friends and make something together. I'll explain git more in a branching and common commands deep dive, but we done need to do that just yet, you can learn as you go. 
 
-Now go to [Part Two Node.js & Gatsby](../Part-2(Windows)/README.md)
+Now go to [Part Three Node.js & Gatsby](../Part-3(Windows)/README.md)
 
 
 

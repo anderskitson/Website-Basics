@@ -1,4 +1,4 @@
-# Part 2, Node.js & Gatsby (Windows Instructions)
+# Part 3, Node.js & Gatsby (Windows Instructions)
 
 - Install Node
 - Visit https://www.gatsbyjs.org/tutorial/
