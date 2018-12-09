@@ -1,59 +1,66 @@
 # Part 2, Basic HTML/CSS/JS (Windows Instructions)
 
 * Delete the `<p>` tag and write this instead
+  
+`index.html`
+```
+<main>
+    <div>box #1</div>
+</main>
+```
+`sass/style.scss`
+```
+main{
+    color:red;
+    border:1px solid red;
+}
+```
+Your website should look like below
+![box-model-image-1](images/box-model-1.png)
+
+* Next we are going to add another `<div>` inside the `<main>` wrapper like so.
 
 ```
 <main>
-    <section class="hero">
-        <div class="col-1 row-2"></div>
-        <h1 class="col-2 row-2">Welcome! to the<br>new world order</h1>
-        <div class="col-3 row-2"></div>
-    </section>
+    <div>box #1</div>
+    <div>box #2</div>
 </main>
 ```
-* Go into the `sass/style.scss` file and type the following
+* Next add the following css, and your new styles should look like below
 
 ```
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
-*{
-    margin: 0;
-    //border:1px solid red;
-}
-body{
-    font-family: 'Source Sans Pro', sans-serif;
+main{
+    color:red;
+    border:1px solid red;
 }
 div{
-    height: 50px;;
+    border:1px solid aqua;
+    margin: 10px;
 }
 ```
+Now your page should look something like this
 
-* You should see some red outlines, this is the box-model and using the `* border:red` is super usefull. Now Write this content below the `</section>` tag. 
+![box-model-image-2](images/box-model-2.png)
 
+* Now you are going to put these divs on the same line and then center the containing red `<main>` container, using some css declarations. First lets put those `<div>`'s on the same line
 ```
-<div class="container">
-    <div class="col-1 intro-text">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p> 
-    </div>
-    <div class="col-2 intro-heading">
-        <h2>
-            How to take over the world!
-        </h2>
-        <a target="_blank" href="http://producthunt.com">See All The Products</a>
-    </div>
-</div>  
-```
-* Go back to your `style.scss` delete the `div { height }...` part and write this below the `body {}` declaration.
-
-```
-.container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: 960px;
-    margin:auto;
+main{
+    color:red;
+    border:1px solid red;
+    position:relative;
+    float: left;
+}
+div{
+    border:1px solid aqua;
+    margin: 10px;
+    float: left;
 }
 ```
+So here we added `float:left`'s and a `position:relative` this is the css box model, your page should look like below now
 
-This should look like the following
-![box model 1](images/box-model-1.png)
+![box-model-image-3](images/box-model-3.png)
+
+* Now we can't center the `<main>` element easily without stuff breaking, so we are going to add another `<div>` below center so you can see how we center stuff, and then we are going to refacor this code to use `display:flex` and then later `display:grid` currently the default is `display:block;` so let's add in another `<div>` At first you will see it stacks it next to the other div's, that is because we are giving every div a `float:left` lets change that, change your html to this
+
+```
+
